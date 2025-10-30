@@ -92,7 +92,8 @@
             opacity: 0;
         }
         #mobile-menu.open {
-            max-height: 300px; /* Height for 4 links */
+            /* EDITED: Increased height to accommodate larger links */
+            max-height: 400px; 
             opacity: 1;
         }
     </style>
@@ -129,12 +130,13 @@
                 </div>
             </div>
         </nav>
-    </header> <div class="sm:hidden bg-white shadow-lg sticky top-16 z-30" id="mobile-menu">
+    </header> 
+    <div class="sm:hidden bg-white shadow-lg sticky top-16 z-30" id="mobile-menu">
         <div class="pt-2 pb-3 space-y-1">
-            <a href="#" class="nav-link-mobile block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800" data-page="home">Home</a>
-            <a href="#" class="nav-link-mobile block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800" data-page="rules">Rules</a>
-            <a href="#" class="nav-link-mobile block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800" data-page="problems">Statements</a>
-            <a href="#" class="nav-link-mobile block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800" data-page="register">Register</a>
+            <a href="#" class="nav-link-mobile block pl-4 pr-3 py-3 border-r-4 border-transparent text-lg font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-right" data-page="home">Home</a>
+            <a href="#" class="nav-link-mobile block pl-4 pr-3 py-3 border-r-4 border-transparent text-lg font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-right" data-page="rules">Rules</a>
+            <a href="#" class="nav-link-mobile block pl-4 pr-3 py-3 border-r-4 border-transparent text-lg font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-right" data-page="problems">Statements</a>
+            <a href="#" class="nav-link-mobile block pl-4 pr-3 py-3 border-r-4 border-transparent text-lg font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-right" data-page="register">Register</a>
         </div>
     </div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
@@ -325,7 +327,7 @@
                 </h3>
                 <p class="text-slate-600 flex-grow">
                     Rural regions lack timely medical care. Build an app or network to connect ambulances and telemedicine support for remote patients.
-                </p>
+                </ADV>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col transition-all hover:shadow-xl hover:-translate-y-1">
@@ -663,6 +665,7 @@
             // Update mobile nav links
             mobileNavLinks.forEach(link => {
                 link.classList.toggle('active', link.dataset.page === pageId); // This class might not be used, but good for consistency
+                // EDITED: Changed border-l- to border-r-
                 link.classList.toggle('border-indigo-500', link.dataset.page === pageId);
                 link.classList.toggle('text-indigo-700', link.dataset.page === pageId);
                 link.classList.toggle('bg-indigo-50', link.dataset.page === pageId);
@@ -822,13 +825,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
