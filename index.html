@@ -483,6 +483,34 @@
                     </div>
 
                     <div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div>
+    <label for="year" class="block text-sm font-medium text-gray-700">
+      Year <span class="text-red-500">*</span>
+    </label>
+    <select name="year" id="year"
+      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+      required>
+      <option value="" disabled selected>Select Year</option>
+      <option value="I Year">I Year</option>
+      <option value="II Year">II Year</option>
+      <option value="III Year">III Year</option>
+      <option value="IV Year">IV Year</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="section" class="block text-sm font-medium text-gray-700">
+      Section <span class="text-red-500">*</span>
+    </label>
+    <input type="text" name="section" id="section"
+      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+      placeholder="e.g., A or B12" required>
+  </div>
+</div>
+
+
+                    <div>
                         <h2 class="text-xl font-semibold text-slate-700 border-b border-gray-200 pb-2 mb-4">Your Idea</h2>
                        <div>
     <label for="problem-statement" class="block text-sm font-medium text-gray-700">
@@ -724,7 +752,7 @@
         const errorMessage = document.getElementById("error-message");
 
         // Replace this with your deployed Apps Script URL after Step 2
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwWyu_mzAUSZQTT9sZe8HSxWGxAF1TfQf8AARmTKOlxBp9_IfM5ipP4WkYK3geuOV-5/exec";
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwt-ocZkBX2ED--9LRcsHrECxbUHdz356rzk76bcMVQ3mE-IXjQF9TYN3HLgwaDvlibnQ/exec";
 
         form.addEventListener("submit", (e) => {
           e.preventDefault();
@@ -836,5 +864,6 @@
 </body>
 
 </html>
+
 
 
